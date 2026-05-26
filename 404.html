@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found · Liquid Sun Creative</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#1B1714">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alata&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+  <style>
+    :root {
+      --ink:    #1B1714;
+      --linen:  #F6F0E0;
+      --golden: #D0A500;
+      --gamma:  #F85D00;
+      --bg: var(--linen);
+      --fg: var(--ink);
+      --mark: var(--golden);
+      --accent: var(--gamma);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: var(--ink); --fg: var(--linen); }
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: 'Alata', 'Sofia Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      line-height: 1.55;
+      text-align: center;
+      -webkit-font-smoothing: antialiased;
+    }
+    main { max-width: 36rem; }
+
+    .mark {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 2rem;
+      color: var(--mark);
+      display: block;
+    }
+
+    .code {
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 0.75rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      font-weight: 400;
+      margin: 0 0 1.75rem;
+    }
+    a.home {
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
+      color: var(--fg);
+      text-decoration: none;
+      border-bottom: 1px solid var(--mark);
+      padding-bottom: 2px;
+      font-size: 0.92rem;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+    a.home:hover,
+    a.home:focus-visible {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <svg class="mark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Liquid Sun Creative mark">
+      <g fill="none" stroke="currentColor" stroke-width="2.5">
+        <circle cx="32" cy="32" r="6"/>
+        <circle cx="32" cy="32" r="14"/>
+        <circle cx="32" cy="32" r="22"/>
+      </g>
+      <circle cx="32" cy="32" r="2.6" fill="var(--accent)"/>
+    </svg>
+
+    <p class="code">404 · Page not found</p>
+    <h1>This page drifted out of frame.</h1>
+    <a class="home" href="/">← Back to Liquid Sun Creative</a>
+  </main>
+</body>
+</html>

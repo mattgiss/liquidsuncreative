@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Liquid Sun Creative | Drone Mapping &amp; Aerial Photogrammetry — Brighton, CO</title>
+  <meta name="description" content="Survey-grade drone mapping and aerial photogrammetry: orthomosaics, 3D models, DSM/DTM, classified point clouds, and feature extraction. Brighton, Colorado.">
+  <link rel="canonical" href="https://liquidsuncreative.com/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#1B1714">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Liquid Sun Creative">
+  <meta property="og:description" content="Survey-grade drone mapping and aerial photogrammetry. Brighton, Colorado.">
+  <meta property="og:url" content="https://liquidsuncreative.com/">
+  <meta property="og:site_name" content="Liquid Sun Creative">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Liquid Sun Creative">
+  <meta name="twitter:description" content="Survey-grade drone mapping and aerial photogrammetry. Brighton, Colorado.">
+
+  <!-- Structured data: ProfessionalService (re-homed from gissentanna.com/matthew/) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": "https://liquidsuncreative.com/#service",
+    "name": "Liquid Sun Creative",
+    "url": "https://liquidsuncreative.com/",
+    "description": "Survey-grade drone mapping and aerial photogrammetry: orthomosaics, 3D models, DSM/DTM, classified point clouds, and feature extraction.",
+    "email": "mailto:matt@gissentanna.com",
+    "founder": {
+      "@type": "Person",
+      "name": "Matthew Gissentanna",
+      "url": "https://gissentanna.com/matthew/",
+      "sameAs": ["https://www.linkedin.com/in/matthewgissentanna/", "https://github.com/mattgiss"],
+      "jobTitle": "Geospatial Analyst & UAS Pilot",
+      "hasCredential": "FAA Part 107 Remote Pilot"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Denver", "containedInPlace": { "@type": "State", "name": "Colorado" } },
+      { "@type": "City", "name": "Brighton", "containedInPlace": { "@type": "State", "name": "Colorado" } }
+    ],
+    "address": { "@type": "PostalAddress", "addressLocality": "Brighton", "addressRegion": "CO", "addressCountry": "US" },
+    "knowsAbout": ["Drone mapping", "Aerial photogrammetry", "Orthomosaic", "Photogrammetry", "GIS", "Part 107"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alata&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+  <style>
+    /* LSC Brand Guide §4.1 palette / §4.4 typography */
+    :root {
+      --ink:    #1B1714;
+      --linen:  #F6F0E0;
+      --golden: #D0A500;
+      --gamma:  #F85D00;
+      --dusk:   #EB701E;
+
+      --bg: var(--linen);
+      --fg: var(--ink);
+      --mark: var(--golden);
+      --accent: var(--gamma);
+      --rule: rgba(27, 23, 20, 0.18);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: var(--ink);
+        --fg: var(--linen);
+        --rule: rgba(246, 240, 224, 0.18);
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: 'Alata', 'Sofia Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      max-width: 38rem;
+      width: 100%;
+      text-align: center;
+    }
+
+    .mark {
+      width: 96px;
+      height: 96px;
+      margin: 0 auto 2.25rem;
+      color: var(--mark);
+      display: block;
+    }
+
+    h1 {
+      font-size: clamp(1.85rem, 5.5vw, 2.75rem);
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 1rem;
+    }
+
+    .tagline {
+      font-size: clamp(1.05rem, 2.4vw, 1.25rem);
+      margin: 0 auto 0.6rem;
+      max-width: 30rem;
+    }
+
+    .location,
+    .status,
+    .contact {
+      font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .location {
+      font-size: 0.82rem;
+      opacity: 0.7;
+      margin: 0 0 3rem;
+    }
+
+    .status {
+      font-size: 0.82rem;
+      color: var(--accent);
+      margin: 0 0 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+    }
+
+    .contact {
+      font-size: 0.92rem;
+      text-transform: none;
+      letter-spacing: 0.02em;
+    }
+
+    .contact a {
+      color: var(--fg);
+      text-decoration: none;
+      border-bottom: 1px solid var(--mark);
+      padding-bottom: 2px;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+    .contact a:hover,
+    .contact a:focus-visible {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <svg class="mark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Liquid Sun Creative mark">
+      <g fill="none" stroke="currentColor" stroke-width="2.5">
+        <circle cx="32" cy="32" r="6"/>
+        <circle cx="32" cy="32" r="14"/>
+        <circle cx="32" cy="32" r="22"/>
+      </g>
+      <circle cx="32" cy="32" r="2.6" fill="var(--accent)"/>
+    </svg>
+
+    <h1>Liquid Sun Creative</h1>
+    <p class="tagline">Survey-grade drone mapping &amp; aerial photogrammetry.</p>
+    <p class="location">Brighton, Colorado</p>
+
+    <p class="status">New site under construction</p>
+
+    <p class="contact">
+      <a href="mailto:matt@gissentanna.com">matt@gissentanna.com</a>
+    </p>
+  </main>
+</body>
+</html>
