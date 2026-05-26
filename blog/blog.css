@@ -1,0 +1,136 @@
+:root {
+  --ink:    #1B1714;
+  --linen:  #F6F0E0;
+  --golden: #D0A500;
+  --gamma:  #F85D00;
+  --dusk:   #EB701E;
+
+  --bg: var(--linen);
+  --fg: var(--ink);
+  --muted: rgba(27, 23, 20, 0.65);
+  --rule: rgba(27, 23, 20, 0.18);
+  --mark: var(--golden);
+  --accent: var(--gamma);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: var(--ink);
+    --fg: var(--linen);
+    --muted: rgba(246, 240, 224, 0.65);
+    --rule: rgba(246, 240, 224, 0.18);
+  }
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Alata', 'Sofia Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--fg); text-decoration: none; border-bottom: 1px solid var(--mark); padding-bottom: 1px; transition: color .2s ease, border-color .2s ease; }
+a:hover, a:focus-visible { color: var(--accent); border-bottom-color: var(--accent); outline: none; }
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--rule);
+  max-width: 64rem;
+  margin: 0 auto;
+}
+.site-mark {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg);
+}
+.site-mark svg { width: 28px; height: 28px; color: var(--mark); }
+.site-nav { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.site-nav a { border: none; }
+
+.blog-index, .post {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 3rem 2rem 5rem;
+}
+
+.blog-index-header { margin-bottom: 3rem; text-align: center; }
+.blog-index-header h1 { font-size: clamp(2rem, 5vw, 2.5rem); font-weight: 400; margin: 0 0 0.5rem; letter-spacing: 0.04em; }
+.blog-index-header .lede { color: var(--muted); margin: 0; }
+
+.post-list { list-style: none; padding: 0; margin: 0; }
+.post-list li { padding: 1.5rem 0; border-bottom: 1px solid var(--rule); }
+.post-list li:last-child { border-bottom: none; }
+.post-list a.post-link {
+  display: block;
+  border: none;
+  color: var(--fg);
+}
+.post-list a.post-link:hover h2 { color: var(--accent); }
+.post-list .post-link-date {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 0.35rem;
+}
+.post-list .post-link h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 0;
+  transition: color .2s ease;
+}
+
+.post-header { text-align: center; margin-bottom: 2.5rem; }
+.post-header .post-date {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 0.5rem;
+}
+.post-header h1 { font-size: clamp(1.75rem, 4.5vw, 2.25rem); font-weight: 400; margin: 0; letter-spacing: 0.02em; }
+
+.post-body h2, .post-body h3, .post-body h4 {
+  font-weight: 400;
+  font-size: 1.05rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+.post-body p { margin: 0 0 1.2rem; }
+.post-body figure { margin: 2rem -1rem; }
+.post-body figure img { width: 100%; height: auto; display: block; border-radius: 4px; }
+.post-body figcaption { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.78rem; color: var(--muted); margin-top: 0.5rem; padding: 0 0.5rem; }
+.post-body em { font-style: italic; }
+.post-body strong { font-weight: 600; }
+.post-body blockquote { border-left: 2px solid var(--mark); margin: 1.5rem 0; padding-left: 1rem; color: var(--muted); font-style: italic; }
+
+.post-footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--rule); text-align: center; }
+.post-footer .back {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: none;
+}
+.post-footer .back:hover { color: var(--accent); }
+
+@media (max-width: 600px) {
+  .post-body figure { margin: 1.5rem 0; }
+  .site-header { padding: 1rem 1.5rem; }
+  .blog-index, .post { padding: 2rem 1.5rem 4rem; }
+}
