@@ -53,7 +53,7 @@ a:hover, a:focus-visible { color: var(--accent); border-bottom-color: var(--acce
   text-transform: uppercase;
   color: var(--fg);
 }
-.site-mark svg { width: 28px; height: 28px; color: var(--mark); }
+.site-mark img { width: 28px; height: 28px; display: block; }
 .site-nav { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; }
 .site-nav a { border: none; }
 

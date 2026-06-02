@@ -130,7 +130,7 @@
       text-transform: uppercase;
       color: var(--fg);
     }
-    .site-mark svg { width: 28px; height: 28px; color: var(--mark); }
+    .site-mark img { width: 28px; height: 28px; display: block; }
     .site-nav { display: flex; gap: 1.5rem; }
     .site-nav a {
       border: none;
@@ -338,7 +338,7 @@
       letter-spacing: 0.12em;
       text-transform: uppercase;
     }
-    footer.site-footer svg { width: 22px; height: 22px; color: var(--golden); }
+    footer.site-footer img { width: 22px; height: 22px; display: block; }
     footer.site-footer a { color: var(--linen); border-color: rgba(246,240,224,0.3); }
     footer.site-footer a:hover { color: var(--gamma); border-color: var(--gamma); }
     footer.site-footer .legal {
@@ -360,14 +360,7 @@
   <header class="site-header">
     <div class="container">
       <a class="site-mark" href="/" aria-label="Liquid Sun Creative — home">
-        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <g fill="none" stroke="currentColor" stroke-width="3">
-            <circle cx="32" cy="32" r="6"/>
-            <circle cx="32" cy="32" r="14"/>
-            <circle cx="32" cy="32" r="22"/>
-          </g>
-          <circle cx="32" cy="32" r="2.6" fill="var(--accent)"/>
-        </svg>
+        <img src="/logo.png" alt="">
         <span>Liquid Sun Creative</span>
       </a>
       <nav class="site-nav" aria-label="Primary">
@@ -526,14 +519,7 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-mark">
-        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <g fill="none" stroke="currentColor" stroke-width="3">
-            <circle cx="32" cy="32" r="6"/>
-            <circle cx="32" cy="32" r="14"/>
-            <circle cx="32" cy="32" r="22"/>
-          </g>
-          <circle cx="32" cy="32" r="2.6" fill="var(--gamma)"/>
-        </svg>
+        <img src="/logo.png" alt="">
         <span>Liquid Sun Creative · Brighton, CO</span>
       </div>
       <nav aria-label="Footer">
