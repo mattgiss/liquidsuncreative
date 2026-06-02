@@ -259,12 +259,47 @@
     /* ---- Work ---- */
     .work-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
       gap: 1rem;
     }
-    .work-grid figure { margin: 0; aspect-ratio: 4 / 3; overflow: hidden; background: var(--ink); border-radius: 3px; }
-    .work-grid figure img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s ease, filter .4s ease; filter: saturate(1.05); }
-    .work-grid figure:hover img { transform: scale(1.04); filter: saturate(1.15); }
+    .work-tile {
+      position: relative;
+      display: block;
+      border: none;
+      border-radius: 3px;
+      overflow: hidden;
+      background: var(--ink);
+      color: var(--linen);
+      aspect-ratio: 4 / 3;
+    }
+    .work-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease, filter .5s ease; filter: saturate(1.05); }
+    .work-tile .work-caption {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1rem 1.1rem;
+      background: linear-gradient(180deg, rgba(27,23,20,0) 40%, rgba(27,23,20,0.85) 100%);
+      transition: background .3s ease;
+    }
+    .work-tile .work-caption .mono { color: var(--golden); margin: 0 0 0.25rem; font-size: 0.7rem; }
+    .work-tile .work-caption .title { font-size: 0.98rem; line-height: 1.3; margin: 0; }
+    .work-tile:hover img, .work-tile:focus-visible img { transform: scale(1.05); filter: saturate(1.18); }
+    .work-tile:hover .work-caption, .work-tile:focus-visible .work-caption { background: linear-gradient(180deg, rgba(27,23,20,0) 20%, rgba(27,23,20,0.9) 100%); }
+    .work-tile:focus-visible { outline: 2px solid var(--gamma); outline-offset: 2px; }
+
+    .work-cta {
+      margin-top: 2.5rem;
+      text-align: center;
+    }
+    .work-cta a {
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--mark);
+    }
 
     /* ---- About ---- */
     .about-row {
@@ -339,6 +374,7 @@
       text-transform: uppercase;
     }
     footer.site-footer img { width: 22px; height: 22px; display: block; }
+    footer.site-footer .footer-nav { display: flex; gap: 1.25rem; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; }
     footer.site-footer a { color: var(--linen); border-color: rgba(246,240,224,0.3); }
     footer.site-footer a:hover { color: var(--gamma); border-color: var(--gamma); }
     footer.site-footer .legal {
@@ -459,16 +495,53 @@
       <div class="section-head">
         <p class="mono eyebrow">Selected work</p>
         <h2 id="work-heading">From the field.</h2>
-        <p>A sample of recent captures — landscapes, structures, and frames from ongoing projects across Colorado and beyond.</p>
+        <p>Geospatial and aerial mapping deliverables from the technical side of Liquid Sun Creative — selected projects from Matthew's portfolio at gissentanna.com/matthew.</p>
       </div>
       <div class="work-grid">
-        <figure><img loading="lazy" src="/blog/s4u3/LSC06624.jpg" alt="Eroded badlands and distant mountains, Utah"></figure>
-        <figure><img loading="lazy" src="/blog/s4u10/LSC01300.jpg" alt="Toyota Land Cruiser in a Colorado forest clearing"></figure>
-        <figure><img loading="lazy" src="/blog/s4u12/LSC01247-4.jpg" alt="Golden-hour waterfall in the Rockies"></figure>
-        <figure><img loading="lazy" src="/blog/s4u17/LSC01648.jpeg" alt="Passenger train crossing a Colorado river"></figure>
-        <figure><img loading="lazy" src="/blog/s4u23/DSC03967.jpg" alt="Alpine pond beneath snow-streaked peaks"></figure>
-        <figure><img loading="lazy" src="/blog/s4u16/DSC03087.jpg" alt="Storm clouds over a forested mountain range"></figure>
+        <a class="work-tile" href="https://gissentanna.com/matthew/work/ccr953-2025-11/">
+          <img loading="lazy" src="https://gissentanna.com/matthew/images/ccr953-hero.jpg" alt="953 Calvary Church Road — aerial photogrammetric mapping">
+          <div class="work-caption">
+            <p class="mono">Photogrammetry · 67 ac</p>
+            <p class="title">953 Calvary Church Road — RTK Aerial Mapping</p>
+          </div>
+        </a>
+        <a class="work-tile" href="https://gissentanna.com/matthew/work/tongass-2025-11/">
+          <img loading="lazy" src="https://gissentanna.com/matthew/images/tongass-hero.jpg" alt="Tongass timber stand aerial valuation">
+          <div class="work-caption">
+            <p class="mono">Aerial Valuation · 2,187 ac</p>
+            <p class="title">Tongass Timber Stand Valuation</p>
+          </div>
+        </a>
+        <a class="work-tile" href="https://gissentanna.com/matthew/work/ecsc-2023-xx/">
+          <img loading="lazy" src="https://gissentanna.com/matthew/images/ecsc-hero.jpg" alt="ECSC service road multi-temporal orthomosaic">
+          <div class="work-caption">
+            <p class="mono">Multi-temporal Capture</p>
+            <p class="title">ECSC Service Road Orthomosaic</p>
+          </div>
+        </a>
+        <a class="work-tile" href="https://gissentanna.com/matthew/work/crash-2026-04/">
+          <img loading="lazy" src="https://gissentanna.com/matthew/images/crash-hero.jpg" alt="Forensic crash scene reconstruction from drone capture">
+          <div class="work-caption">
+            <p class="mono">Forensic · UAS</p>
+            <p class="title">Crash Scene Reconstruction</p>
+          </div>
+        </a>
+        <a class="work-tile" href="https://gissentanna.com/matthew/work/aval-2025-11/">
+          <img loading="lazy" src="https://gissentanna.com/matthew/images/aval-hero.jpg" alt="Crested Butte avalanche zone hazard mapping">
+          <div class="work-caption">
+            <p class="mono">Hazard Mapping · CO</p>
+            <p class="title">Crested Butte Avalanche Zone Mapping</p>
+          </div>
+        </a>
+        <a class="work-tile" href="https://gissentanna.com/matthew/work/poway-2025-11/">
+          <img loading="lazy" src="https://gissentanna.com/matthew/images/poway-hero.jpg" alt="Poway fire station siting suitability analysis">
+          <div class="work-caption">
+            <p class="mono">Siting Analysis</p>
+            <p class="title">Poway Fire Station Siting</p>
+          </div>
+        </a>
       </div>
+      <p class="work-cta"><a href="https://gissentanna.com/matthew/">See the full portfolio at gissentanna.com →</a></p>
     </div>
   </section>
 
@@ -480,8 +553,9 @@
       </div>
       <div class="about-row">
         <div>
-          <p>Liquid Sun Creative is led by Matthew Gissentanna Sr., an FAA Part 107 certified drone pilot and filmmaker based in Brighton, Colorado. We deliver aerial imaging and visual content for clients across the U.S. — combining technical expertise with artistic vision.</p>
+          <p>Liquid Sun Creative is led by <a href="https://gissentanna.com/matthew/">Matthew Gissentanna Sr.</a>, an FAA Part 107 certified drone pilot, geospatial analyst, and filmmaker based in Brighton, Colorado. We deliver aerial imaging and visual content for clients across the U.S. — combining technical expertise with artistic vision.</p>
           <p>Whether the brief is construction progress documentation, real estate visuals, asset inspections, or branded marketing content, we run full-service aerial and ground-based production. Fully insured for commercial operations, with a network that lets us travel to where the story is.</p>
+          <p>For drone-mapping deliverables and geospatial analysis, see Matthew's portfolio at <a href="https://gissentanna.com/matthew/">gissentanna.com/matthew</a>.</p>
         </div>
         <div class="credentials">
           <span class="mono">Operating credentials</span>
@@ -490,6 +564,7 @@
             <li>Fully insured for commercial UAS operations</li>
             <li>15+ years filmmaking &amp; photography</li>
             <li>Based in Brighton, CO · Serving nationwide</li>
+            <li>Portfolio: <a href="https://gissentanna.com/matthew/">gissentanna.com/matthew</a></li>
           </ul>
         </div>
       </div>
@@ -522,8 +597,9 @@
         <img src="/logo.png" alt="">
         <span>Liquid Sun Creative · Brighton, CO</span>
       </div>
-      <nav aria-label="Footer">
-        <a href="/blog/">Newsletter archive</a>
+      <nav aria-label="Footer" class="footer-nav">
+        <a href="/blog/">Newsletter</a>
+        <a href="https://gissentanna.com/matthew/">Portfolio</a>
       </nav>
       <p class="legal">© 2026 Liquid Sun Creative</p>
     </div>
