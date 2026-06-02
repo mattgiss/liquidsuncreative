@@ -3,25 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Liquid Sun Creative | Drone Mapping &amp; Aerial Photogrammetry — Brighton, CO</title>
-  <meta name="description" content="Survey-grade drone mapping and aerial photogrammetry: orthomosaics, 3D models, DSM/DTM, classified point clouds, and feature extraction. Brighton, Colorado.">
+  <title>Liquid Sun Creative | Drone Services, Aerial Mapping &amp; Video Marketing — Denver, CO</title>
+  <meta name="description" content="Liquid Sun Creative — FAA Part 107 drone services, aerial mapping, and cinematic video marketing for construction, real estate, telecom, and outdoor brands. Denver, Colorado.">
   <link rel="canonical" href="https://liquidsuncreative.com/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <meta name="theme-color" content="#1B1714">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Liquid Sun Creative">
-  <meta property="og:description" content="Survey-grade drone mapping and aerial photogrammetry. Brighton, Colorado.">
+  <meta property="og:description" content="Drone services, aerial mapping, and cinematic video marketing. Denver, Colorado.">
   <meta property="og:url" content="https://liquidsuncreative.com/">
   <meta property="og:site_name" content="Liquid Sun Creative">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Liquid Sun Creative">
-  <meta name="twitter:description" content="Survey-grade drone mapping and aerial photogrammetry. Brighton, Colorado.">
+  <meta name="twitter:description" content="Drone services, aerial mapping, and cinematic video marketing. Denver, Colorado.">
 
-  <!-- Structured data: ProfessionalService (re-homed from gissentanna.com/matthew/) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -29,8 +26,9 @@
     "@id": "https://liquidsuncreative.com/#service",
     "name": "Liquid Sun Creative",
     "url": "https://liquidsuncreative.com/",
-    "description": "Survey-grade drone mapping and aerial photogrammetry: orthomosaics, 3D models, DSM/DTM, classified point clouds, and feature extraction.",
+    "description": "Drone services, aerial mapping, and cinematic video marketing for construction, real estate, telecom, and outdoor brands.",
     "email": "mailto:matt@gissentanna.com",
+    "telephone": "+1-720-965-5359",
     "founder": {
       "@type": "Person",
       "name": "Matthew Gissentanna",
@@ -44,7 +42,7 @@
       { "@type": "City", "name": "Brighton", "containedInPlace": { "@type": "State", "name": "Colorado" } }
     ],
     "address": { "@type": "PostalAddress", "addressLocality": "Brighton", "addressRegion": "CO", "addressCountry": "US" },
-    "knowsAbout": ["Drone mapping", "Aerial photogrammetry", "Orthomosaic", "Photogrammetry", "GIS", "Part 107"]
+    "knowsAbout": ["Drone services", "Aerial photogrammetry", "Orthomosaic mapping", "Construction progress monitoring", "Asset inspection", "Telecom tower inspection", "Video marketing", "Real estate video", "Cinematography", "FAA Part 107"]
   }
   </script>
 
@@ -53,7 +51,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alata&family=IBM+Plex+Mono:wght@400;500&display=swap">
 
   <style>
-    /* LSC Brand Guide §4.1 palette / §4.4 typography */
+    /* LSC Brand Guide §4.1 / §4.4 */
     :root {
       --ink:    #1B1714;
       --linen:  #F6F0E0;
@@ -63,124 +61,487 @@
 
       --bg: var(--linen);
       --fg: var(--ink);
+      --muted: rgba(27, 23, 20, 0.65);
+      --rule: rgba(27, 23, 20, 0.18);
+      --surface: #ffffff;
       --mark: var(--golden);
       --accent: var(--gamma);
-      --rule: rgba(27, 23, 20, 0.18);
     }
     @media (prefers-color-scheme: dark) {
       :root {
         --bg: var(--ink);
         --fg: var(--linen);
+        --muted: rgba(246, 240, 224, 0.65);
         --rule: rgba(246, 240, 224, 0.18);
+        --surface: #221d19;
       }
     }
 
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     html, body { margin: 0; padding: 0; }
     body {
       background: var(--bg);
       color: var(--fg);
       font-family: 'Alata', 'Sofia Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-      line-height: 1.55;
+      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
 
-    main {
-      max-width: 38rem;
-      width: 100%;
-      text-align: center;
-    }
+    a { color: var(--fg); text-decoration: none; border-bottom: 1px solid var(--mark); padding-bottom: 1px; transition: color .2s ease, border-color .2s ease; }
+    a:hover, a:focus-visible { color: var(--accent); border-bottom-color: var(--accent); outline: none; }
 
-    .mark {
-      width: 96px;
-      height: 96px;
-      margin: 0 auto 2.25rem;
-      color: var(--mark);
-      display: block;
-    }
-
-    h1 {
-      font-size: clamp(1.85rem, 5.5vw, 2.75rem);
-      font-weight: 400;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      margin: 0 0 1rem;
-    }
-
-    .tagline {
-      font-size: clamp(1.05rem, 2.4vw, 1.25rem);
-      margin: 0 auto 0.6rem;
-      max-width: 30rem;
-    }
-
-    .location,
-    .status,
-    .contact {
+    .mono {
       font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+      font-size: 0.78rem;
     }
 
-    .location {
-      font-size: 0.82rem;
-      opacity: 0.7;
-      margin: 0 0 3rem;
+    .container {
+      max-width: 72rem;
+      margin: 0 auto;
+      padding: 0 2rem;
     }
 
-    .status {
-      font-size: 0.82rem;
-      color: var(--accent);
-      margin: 0 0 2rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--rule);
+    /* ---- Header ---- */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: color-mix(in srgb, var(--bg) 92%, transparent);
+      backdrop-filter: saturate(140%) blur(10px);
+      border-bottom: 1px solid var(--rule);
     }
-
-    .contact {
-      font-size: 0.92rem;
-      text-transform: none;
-      letter-spacing: 0.02em;
+    .site-header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
     }
-
-    .contact a {
+    .site-mark {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      border: none;
+      font-size: 0.95rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
       color: var(--fg);
-      text-decoration: none;
-      border-bottom: 1px solid var(--mark);
-      padding-bottom: 2px;
-      transition: color 0.2s ease, border-color 0.2s ease;
     }
-    .contact a:hover,
-    .contact a:focus-visible {
+    .site-mark svg { width: 28px; height: 28px; color: var(--mark); }
+    .site-nav { display: flex; gap: 1.5rem; }
+    .site-nav a {
+      border: none;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--fg);
+    }
+    .site-nav a:hover { color: var(--accent); }
+    @media (max-width: 640px) {
+      .site-nav { display: none; }
+    }
+
+    /* ---- Hero ---- */
+    .hero {
+      position: relative;
+      min-height: min(88vh, 800px);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--ink);
+      color: var(--linen);
+    }
+    .hero-img {
+      position: absolute; inset: 0;
+      background-image: url('/blog/s4u11/summitlake.JPG');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.55) saturate(1.05);
+    }
+    .hero-img::after {
+      content: "";
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(27,23,20,0.4) 0%, rgba(27,23,20,0.1) 40%, rgba(27,23,20,0.85) 100%);
+    }
+    .hero .container { position: relative; padding-top: 6rem; padding-bottom: 5rem; }
+    .hero-eyebrow { color: var(--golden); margin: 0 0 1rem; }
+    .hero h1 {
+      font-size: clamp(2.25rem, 6vw, 4rem);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      max-width: 22ch;
+      margin: 0 0 1.5rem;
+    }
+    .hero h1 em { color: var(--gamma); font-style: normal; }
+    .hero-lede {
+      font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+      max-width: 40ch;
+      margin: 0 0 2.5rem;
+      color: rgba(246, 240, 224, 0.85);
+    }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 1.4rem;
+      border: 1px solid currentColor;
+      border-radius: 2px;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+    }
+    .btn-primary { background: var(--gamma); color: var(--ink); border-color: var(--gamma); }
+    .btn-primary:hover { background: var(--dusk); border-color: var(--dusk); color: var(--ink); }
+    .btn-ghost { color: var(--linen); border-color: rgba(246, 240, 224, 0.4); background: transparent; }
+    .btn-ghost:hover { background: rgba(246, 240, 224, 0.08); border-color: var(--linen); }
+
+    /* ---- Section base ---- */
+    section.band { padding: 5rem 0; border-bottom: 1px solid var(--rule); }
+    section.band:last-of-type { border-bottom: none; }
+    .section-head { max-width: 38rem; margin: 0 0 3rem; }
+    .section-head .eyebrow { color: var(--accent); margin: 0 0 0.5rem; }
+    .section-head h2 {
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      font-weight: 400;
+      line-height: 1.15;
+      letter-spacing: -0.005em;
+      margin: 0 0 1rem;
+    }
+    .section-head p { color: var(--muted); margin: 0; font-size: 1.05rem; }
+
+    /* ---- Process ---- */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      gap: 2rem;
+    }
+    .step h3 { font-size: 1.15rem; font-weight: 400; margin: 0 0 0.5rem; letter-spacing: 0.04em; }
+    .step .num {
+      display: inline-block;
       color: var(--accent);
-      border-bottom-color: var(--accent);
-      outline: none;
+      margin: 0 0 0.5rem;
+    }
+    .step p { color: var(--muted); margin: 0; font-size: 0.97rem; }
+
+    /* ---- Services ---- */
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+      gap: 1.5rem;
+    }
+    .service {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      padding: 2rem;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .service h3 {
+      font-size: 1.3rem;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      margin: 0;
+      color: var(--fg);
+    }
+    .service .tagline { color: var(--accent); margin: 0; font-size: 0.95rem; }
+    .service p { color: var(--muted); margin: 0; font-size: 0.97rem; }
+    .service ul { margin: 0; padding-left: 1.1rem; color: var(--muted); font-size: 0.95rem; }
+    .service ul li { margin-bottom: 0.35rem; }
+
+    /* ---- Work ---- */
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      gap: 1rem;
+    }
+    .work-grid figure { margin: 0; aspect-ratio: 4 / 3; overflow: hidden; background: var(--ink); border-radius: 3px; }
+    .work-grid figure img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s ease, filter .4s ease; filter: saturate(1.05); }
+    .work-grid figure:hover img { transform: scale(1.04); filter: saturate(1.15); }
+
+    /* ---- About ---- */
+    .about-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .about-row .credentials .mono {
+      display: block;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    .about-row .credentials ul { list-style: none; padding: 0; margin: 0; color: var(--muted); }
+    .about-row .credentials ul li { padding: 0.5rem 0; border-bottom: 1px solid var(--rule); font-size: 0.95rem; }
+    .about-row .credentials ul li:last-child { border-bottom: none; }
+    @media (max-width: 720px) {
+      .about-row { grid-template-columns: 1fr; gap: 2rem; }
+    }
+
+    /* ---- Contact ---- */
+    .contact {
+      background: var(--ink);
+      color: var(--linen);
+      border: none;
+    }
+    .contact .section-head h2 { color: var(--linen); }
+    .contact .section-head p { color: rgba(246,240,224,0.75); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    .contact-card {
+      border: 1px solid rgba(246,240,224,0.2);
+      padding: 2rem;
+      border-radius: 4px;
+    }
+    .contact-card .mono { color: var(--golden); display: block; margin-bottom: 0.75rem; }
+    .contact-card a {
+      color: var(--linen);
+      font-size: 1.25rem;
+      border-bottom-color: rgba(246,240,224,0.3);
+      word-break: break-word;
+    }
+    .contact-card a:hover { color: var(--gamma); border-bottom-color: var(--gamma); }
+    @media (max-width: 640px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ---- Footer ---- */
+    footer.site-footer {
+      padding: 3rem 0 4rem;
+      background: var(--ink);
+      color: var(--linen);
+      border-top: 1px solid rgba(246,240,224,0.1);
+    }
+    footer.site-footer .container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    footer.site-footer .footer-mark {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    footer.site-footer svg { width: 22px; height: 22px; color: var(--golden); }
+    footer.site-footer a { color: var(--linen); border-color: rgba(246,240,224,0.3); }
+    footer.site-footer a:hover { color: var(--gamma); border-color: var(--gamma); }
+    footer.site-footer .legal {
+      color: rgba(246,240,224,0.55);
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+    }
+
+    @media (max-width: 640px) {
+      .container { padding: 0 1.25rem; }
+      section.band { padding: 3.5rem 0; }
+      .hero .container { padding-top: 4rem; padding-bottom: 3rem; }
     }
   </style>
 </head>
 <body>
-  <main>
-    <svg class="mark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Liquid Sun Creative mark">
-      <g fill="none" stroke="currentColor" stroke-width="2.5">
-        <circle cx="32" cy="32" r="6"/>
-        <circle cx="32" cy="32" r="14"/>
-        <circle cx="32" cy="32" r="22"/>
-      </g>
-      <circle cx="32" cy="32" r="2.6" fill="var(--accent)"/>
-    </svg>
 
-    <h1>Liquid Sun Creative</h1>
-    <p class="tagline">Survey-grade drone mapping &amp; aerial photogrammetry.</p>
-    <p class="location">Brighton, Colorado</p>
+  <header class="site-header">
+    <div class="container">
+      <a class="site-mark" href="/" aria-label="Liquid Sun Creative — home">
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <g fill="none" stroke="currentColor" stroke-width="3">
+            <circle cx="32" cy="32" r="6"/>
+            <circle cx="32" cy="32" r="14"/>
+            <circle cx="32" cy="32" r="22"/>
+          </g>
+          <circle cx="32" cy="32" r="2.6" fill="var(--accent)"/>
+        </svg>
+        <span>Liquid Sun Creative</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="/blog/">Newsletter</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <p class="status">New site under construction</p>
+  <section class="hero" aria-label="Intro">
+    <div class="hero-img" role="img" aria-label="Aerial landscape — Summit Lake, Colorado"></div>
+    <div class="container">
+      <p class="mono hero-eyebrow">Drone services · Aerial mapping · Video marketing</p>
+      <h1>Sharp data, <em>sharp storytelling.</em></h1>
+      <p class="hero-lede">FAA Part 107 drone services and cinematic video production for construction, real estate, telecom, and outdoor brands — based in Denver, Colorado, working nationwide.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#contact">Start a Project</a>
+        <a class="btn btn-ghost" href="#services">See Services</a>
+      </div>
+    </div>
+  </section>
 
-    <p class="contact">
-      <a href="mailto:matt@gissentanna.com">matt@gissentanna.com</a>
-    </p>
-  </main>
+  <section class="band" id="process" aria-labelledby="process-heading">
+    <div class="container">
+      <div class="section-head">
+        <p class="mono eyebrow">How we work</p>
+        <h2 id="process-heading">Three steps from idea to deliverable.</h2>
+        <p>Whether it's drone data, marketing video, or both — we translate goals into a scoped project with clear milestones and a final package ready for use.</p>
+      </div>
+      <div class="process-grid">
+        <div class="step">
+          <p class="num mono">Step 01</p>
+          <h3>You share the mission</h3>
+          <p>Tell us what you need, when you need it, and what success looks like. We translate goals into a scoped project with clear outcomes.</p>
+        </div>
+        <div class="step">
+          <p class="num mono">Step 02</p>
+          <h3>We execute the plan</h3>
+          <p>Airspace checks, shot planning, compliance, weather reviews, production logistics — handled. Drone flights and on-the-ground filming with operational discipline.</p>
+        </div>
+        <div class="step">
+          <p class="num mono">Step 03</p>
+          <h3>You get the goods</h3>
+          <p>Curated media, edited and formatted, organized for immediate use — whether you're presenting to clients, marketing a product, or documenting a site.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="services" aria-labelledby="services-heading">
+    <div class="container">
+      <div class="section-head">
+        <p class="mono eyebrow">Services</p>
+        <h2 id="services-heading">Three lines of work, one operator.</h2>
+        <p>Built for clients who need precision in the data and craft in the story.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service">
+          <h3>Construction Progress Monitoring</h3>
+          <p class="tagline">A smarter way to manage your build.</p>
+          <p>Consistent aerial documentation to spot problems early, keep crews safe, and give stakeholders a clear view of progress — across commercial, residential, and public infrastructure.</p>
+          <ul>
+            <li>Scheduled weekly or milestone flights</li>
+            <li>Progress photos and timeline flyovers</li>
+            <li>Decks, RFI support, and documentation</li>
+          </ul>
+        </article>
+        <article class="service">
+          <h3>Asset &amp; Site Capture</h3>
+          <p class="tagline">See every detail without the risk.</p>
+          <p>High-resolution visuals and orthomosaics of hard-to-reach assets — rooftops, towers, solar arrays, agricultural fields — captured safely from the air.</p>
+          <ul>
+            <li>2D orthomosaic mapping (GIS-ready)</li>
+            <li>Telecom and infrastructure inspection</li>
+            <li>Property and rooftop documentation</li>
+          </ul>
+        </article>
+        <article class="service">
+          <h3>Video Marketing</h3>
+          <p class="tagline">Stories that sell.</p>
+          <p>Cinematic, strategy-driven video for real estate, outdoor brands, and industrial clients — written, filmed, edited, and packaged for the channels you actually use.</p>
+          <ul>
+            <li>Listing videos and aerial flyovers</li>
+            <li>Lifestyle and adventure brand films</li>
+            <li>Time-lapse builds and progress recaps</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="work" aria-labelledby="work-heading">
+    <div class="container">
+      <div class="section-head">
+        <p class="mono eyebrow">Selected work</p>
+        <h2 id="work-heading">From the field.</h2>
+        <p>A sample of recent captures — landscapes, structures, and frames from ongoing projects across Colorado and beyond.</p>
+      </div>
+      <div class="work-grid">
+        <figure><img loading="lazy" src="/blog/s4u20/DSC03500.jpg" alt="Aerial landscape capture"></figure>
+        <figure><img loading="lazy" src="/blog/s4u3/LSC06624.jpg" alt="Liquid Sun Creative field work"></figure>
+        <figure><img loading="lazy" src="/blog/s4u12/LSC01247-4.jpg" alt="Drone capture"></figure>
+        <figure><img loading="lazy" src="/blog/s4u17/LSC01648.jpeg" alt="Aerial documentation"></figure>
+        <figure><img loading="lazy" src="/blog/s4u23/DSC03967.jpg" alt="Field photography"></figure>
+        <figure><img loading="lazy" src="/blog/s4u16/DSC03087.jpg" alt="Outdoor capture"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="about" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="section-head">
+        <p class="mono eyebrow">About</p>
+        <h2 id="about-heading">A Colorado studio with a Part 107 in the air and 15 years behind the lens.</h2>
+      </div>
+      <div class="about-row">
+        <div>
+          <p>Liquid Sun Creative is led by Matthew Gissentanna Sr., an FAA Part 107 certified drone pilot and filmmaker based in Brighton, Colorado. We deliver aerial imaging and visual content for clients across the U.S. — combining technical expertise with artistic vision.</p>
+          <p>Whether the brief is construction progress documentation, real estate visuals, asset inspections, or branded marketing content, we run full-service aerial and ground-based production. Fully insured for commercial operations, with a network that lets us travel to where the story is.</p>
+        </div>
+        <div class="credentials">
+          <span class="mono">Operating credentials</span>
+          <ul>
+            <li>FAA Part 107 Remote Pilot</li>
+            <li>Fully insured for commercial UAS operations</li>
+            <li>15+ years filmmaking &amp; photography</li>
+            <li>Based in Brighton, CO · Serving nationwide</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band contact" id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="section-head">
+        <p class="mono eyebrow">Contact</p>
+        <h2 id="contact-heading">Tell us what you need.</h2>
+        <p>Send a note or call — we typically reply within one business day.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <span class="mono">Email</span>
+          <a href="mailto:matt@gissentanna.com">matt@gissentanna.com</a>
+        </div>
+        <div class="contact-card">
+          <span class="mono">Phone</span>
+          <a href="tel:+17209655359">(720) 965-5359</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-mark">
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <g fill="none" stroke="currentColor" stroke-width="3">
+            <circle cx="32" cy="32" r="6"/>
+            <circle cx="32" cy="32" r="14"/>
+            <circle cx="32" cy="32" r="22"/>
+          </g>
+          <circle cx="32" cy="32" r="2.6" fill="var(--gamma)"/>
+        </svg>
+        <span>Liquid Sun Creative · Brighton, CO</span>
+      </div>
+      <nav aria-label="Footer">
+        <a href="/blog/">Newsletter archive</a>
+      </nav>
+      <p class="legal">© 2026 Liquid Sun Creative</p>
+    </div>
+  </footer>
+
 </body>
 </html>
